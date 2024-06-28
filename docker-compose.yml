@@ -8,6 +8,8 @@ services:
     environment:
       - USER=rstudio
       - PASSWORD=rstudio  # Change this to a secure password
+      - RENV_PATHS_CACHE=/home/rstudio/renv_cache
     volumes:
       - C:\Users\${USERNAME}\Vrije Universiteit Amsterdam:/home/rstudio/VU
       - C:\Users\${USERNAME}\Documents\repositories:/home/rstudio/repositories
+      - C:\Users\${USERNAME}\AppData\Local\R\cache\R\renv:/home/rstudio/renv_cache

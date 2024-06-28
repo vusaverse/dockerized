@@ -10,3 +10,6 @@ RUN apt-get update && apt-get install -y \
 
 # Install renv
 RUN R -e "install.packages('renv')"
+
+# Set RENV_PATHS_CACHE
+ENV RENV_PATHS_CACHE=/home/rstudio/renv_cache
