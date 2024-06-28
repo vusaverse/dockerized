@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  rstudio:
+    build: .  # This line tells Docker to use your Dockerfile
+    ports:
+      - "8787:8787"
+    environment:
+      - USER=rstudio
+      - PASSWORD=rstudio  # Change this to a secure password
+    volumes:
+      - C:\Users\${USERNAME}\Vrije Universiteit Amsterdam:/home/rstudio/VU
+      - C:\Users\${USERNAME}\Documents\repositories:/home/rstudio/repositories
